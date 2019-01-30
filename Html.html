@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon"  href="C:\Users\MOIN AKHTER\Desktop\images.jpg">
+    <title>Color Change</title>
+    <style>
+        body
+        {
+            min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+        #Change_Color_Button
+        {
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        #Change_Color_Button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+#Change_Color_Button:active
+{
+    color:black;
+}
+    </style>
+</head>
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-lg-offset-2">
+                        <h1>#FFFFFF</h1>
+                        <button id="Change_Color_Button"type="button" class="btn btn-primary" onclick="Changecolor()">Click Me To Change Color</button>
+                </div>
+            </div>
+        </div>
+<script>
+    var arr=[1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G'];
+  function Changecolor()
+  {
+      var z=document.querySelector('button');
+      var clr='#';
+      for(var i=0;i<6;i++)
+      {
+          var rand=Math.floor(Math.random()*15);
+         clr+=arr[rand];
+      }
+      var y=document.querySelector('h1');
+    var x=document.querySelector('body');
+    x.style.backgroundColor=clr;
+    y.innerHTML=clr;
+  }
+</script>
+<script src="bootstrap/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
